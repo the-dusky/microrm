@@ -1,10 +1,10 @@
-<?php namespace KAK;
+<?php namespace MicrORM;
 
 use PDO;
 use PDOStatement;
 use PDOException;
 
-class Database
+class MicroORM
 {
     /**
      * @var PDO
@@ -525,20 +525,8 @@ class Database
         $this->execute();
     }
 
-    public function freeQuery($sql, $type) {
-
-    }
-
     public function getErrorMessages() {
         return $this->error_messages;
     }
 
-    public function slugize($string, $separator = '-', $maxLength = 96) {
-        //$title = iconv('UTF-8', 'ASCII//TRANSLIT', $string);
-        $title = preg_replace("%[^-/+|\w ]%", '', $string);
-        $title = strtolower(trim(substr($title, 0, $maxLength), '-'));
-        $title = preg_replace("/[\/_|+ -]+/", $separator, $title);
-
-        return $title;
-    }
 }
