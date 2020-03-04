@@ -2,4 +2,3 @@
 index.php
 composer.lock
 /vendor
-.gitignore
