@@ -4,7 +4,7 @@ use PDO;
 use PDOStatement;
 use PDOException;
 
-class MicroORM
+class MicrORM
 {
     /**
      * @var PDO
